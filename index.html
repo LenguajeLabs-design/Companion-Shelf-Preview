@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f6f5f0" />
+    <meta
+      name="description"
+      content="A calm curriculum companion library. Find your book, choose your lesson, and prepare to teach with clarity."
+    />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <title>CompanionShelf · Your teaching library</title>
+    <style>
+      .launch-note {
+        box-sizing: border-box;
+        max-width: 540px;
+        margin: 12vh auto;
+        padding: 32px;
+        color: #263a34;
+        background: #f8f7f3;
+        border: 1px solid #dce2d4;
+        border-radius: 10px;
+        font:
+          16px/1.7 system-ui,
+          sans-serif;
+      }
+      .launch-note h1 {
+        font:
+          36px/1.15 Georgia,
+          serif;
+      }
+      .launch-note a {
+        display: inline-block;
+        padding: 12px 20px;
+        color: #fffefa;
+        background: #285d51;
+        border-radius: 5px;
+        text-decoration: none;
+      }
+      .launch-note a:focus-visible {
+        outline: 3px solid #285d51;
+        outline-offset: 4px;
+      }
+      .launch-note code {
+        font-size: 13px;
+        overflow-wrap: anywhere;
+      }
+    </style>
+    <script type="module" crossorigin src="/Companion-Shelf-Preview/assets/index-BznstsEf.js"></script>
+    <link rel="stylesheet" crossorigin href="/Companion-Shelf-Preview/assets/index-x2enFXz9.css">
+  </head>
+  <body>
+    <div id="root">
+      <main class="launch-note">
+        <p>CompanionShelf</p>
+        <h1>Opening your teaching library.</h1>
+        <p>Your library is loading. If it doesn’t appear, reload the page.</p>
+        <a href="./">Reload library</a>
+        <p id="local-start" hidden>
+          If the server is stopped, run <code>npm run dev</code> in the
+          Companion Shelf project folder, then open the link above.
+        </p>
+      </main>
+    </div>
+    <script>
+      if (window.location.protocol === "file:") {
+        document.querySelector(".launch-note h1").textContent =
+          "Your teaching library is ready.";
+        document.querySelector(".launch-note a").href =
+          "http://127.0.0.1:5197/";
+        document.querySelector(".launch-note a").textContent =
+          "Open CompanionShelf";
+        document.getElementById("local-start").hidden = false;
+        window.location.replace(
+          "http://127.0.0.1:5197/" + window.location.hash,
+        );
+      }
+    </script>
+    <noscript
+      ><p
+        style="
+          max-width: 540px;
+          margin: auto;
+          padding: 24px;
+          font: 16px/1.7 system-ui;
+        "
+      >
+        Enable JavaScript in your browser to use CompanionShelf.
+      </p></noscript
+    >
+  </body>
+</html>
